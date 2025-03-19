@@ -1,0 +1,28 @@
+# Ignorar archivos generados por Eclipse
+.metadata/
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+
+# Ignorar archivos de compilación
+*.class
+*.war
+*.ear
+
+
+# Ignorar archivos de configuración del IDE
+.idea/
+*.iml
+*.ipr
+*.iws
+
+# Ignorar archivos del sistema operativo
+.DS_Store
+Thumbs.db
