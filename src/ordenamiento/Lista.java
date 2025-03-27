@@ -23,6 +23,15 @@ public class Lista {
 		return nodo.val;
 	}
 	
+	public void mostrar() {
+		Nodo nodo = cabeza;
+		for(int i=0; i< tamanio; i++) {
+			System.out.print(nodo.val + " ");
+			nodo = nodo.siguiente;
+			
+		}
+	}
+	
 	public void insertarAlInicio(int val) {
 		Nodo nodo = new Nodo(val);
 		nodo.siguiente = cabeza;
@@ -80,11 +89,30 @@ public class Lista {
 		}
 		if(anterior == null) {
 			cabeza = cabeza.siguiente;
+			return;
 		}
 		
 		anterior.siguiente = actual.siguiente;
 		tamanio--;
 		
+	}
+	
+	public void eliminarAlFinal() {
+		if(isEmpty()) {
+			return;
+		}
+		Nodo anterior = cabeza;
+		if(anterior.siguiente == null) {
+			//solo hay un elemento
+			cabeza = null;
+			return;
+		}
+		while(anterior.siguiente.siguiente != null) {
+			anterior = anterior.siguiente;
+		}
+		//eliminar actual
+		anterior.siguiente = null;
+		tamanio--;
 	}
 	
 	public boolean isEmpty() {

@@ -1,7 +1,7 @@
 package ordenamiento;
 
 public class Nodo {
-	 int  val;
+	int  val;
 	Nodo siguiente;
 	
 	public Nodo(int val) {
