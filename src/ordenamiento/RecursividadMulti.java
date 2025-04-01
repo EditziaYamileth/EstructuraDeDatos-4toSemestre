@@ -6,6 +6,7 @@ public class RecursividadMulti {
 	static Scanner scanner = new Scanner(System.in);
 
 	public static void main(String[] args) {
+		//Muestra una tabla de multiplicar
 		int num, x;
 		System.out.println("Ingrese un numero: ");
 		num = scanner.nextInt();

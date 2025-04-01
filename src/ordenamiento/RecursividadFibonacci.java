@@ -6,10 +6,14 @@ public class RecursividadFibonacci {
 static Scanner scanner = new Scanner(System.in);
 
 	public static void main(String[] args) {
+		//Fibonacci
 		int num;
 		System.out.println("Ingrese un numero");
 		num = scanner.nextInt();
-		System.out.println(metodoRecursivo(num));
+		//System.out.println(metodoRecursivo(num));
+		for(int i=0; i<num; i++) {
+			System.out.println(metodoRecursivo(i));
+		}
 		
 
 	}

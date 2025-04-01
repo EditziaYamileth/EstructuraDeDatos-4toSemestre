@@ -6,12 +6,13 @@ public class RecursividadPotencia {
 static Scanner scanner = new Scanner(System.in);
 
 	public static void main(String[] args) {
+		//Muestra la potencia utilizando recursividad
 		int base, potencia;
 		System.out.println("Ingrese la base: ");
 		base = scanner.nextInt();
 		System.out.println("Ingrese la potencia: ");
 		potencia = scanner.nextInt();
-		System.out.println("La potencia "+potencia+" de "+base+" es:");
+		System.out.println("La potencia "+base+" de "+potencia+" es:");
 		System.out.println(recursividadPot(base, potencia));
 		
 		

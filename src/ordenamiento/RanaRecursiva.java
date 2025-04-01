@@ -6,7 +6,12 @@ public class RanaRecursiva {
 static Scanner scanner = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		/*Hay una rana a la que le gusta mucho saltar, actualmente, se encuentra un poco lejos de su hogar,
+		se sabe que la rana puede brincar hasta B metros por segundo y que su hogar se encuentra a M
+		metros de ella, si esta no se cansara, ni tuviera inconvenientes en el camino, ¿cuál sería la cantidad
+		mínima de segundos para llegar a su hogar saltando? Leerás B y M e imprimirás los segundos
+		mínimos.*/
+		
 		int segundosMin = 0;
     	
     	System.out.println("Ingresar cuantos metros por segundos puede saltar la rana:");

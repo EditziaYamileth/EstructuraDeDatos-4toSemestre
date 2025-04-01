@@ -5,6 +5,7 @@ import java.util.Scanner;
 public class RecursividadFactorial {
 static Scanner scanner = new Scanner(System.in);
 	public static void main(String[] args) {
+		//Factorial
 		int num;
 		System.out.println("Ingrese un numero: ");
 		num = scanner.nextInt();

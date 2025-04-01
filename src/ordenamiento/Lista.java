@@ -42,6 +42,7 @@ public class Lista {
 	public void insertarAlFinal(int val) {
 		if(isEmpty()) {
 			cabeza = new Nodo(val);
+			tamanio++;
 			return;
 		}
 		Nodo nodo = new Nodo(val);

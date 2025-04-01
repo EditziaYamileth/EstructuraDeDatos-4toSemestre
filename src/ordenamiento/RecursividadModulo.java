@@ -6,6 +6,7 @@ public class RecursividadModulo {
 static Scanner scanner = new Scanner(System.in);
 
 		public static void main(String[] args) {
+			//Modulo
 			int num1,num2;
 			System.out.println("Ingrese un numero: ");
 			num1 = scanner.nextInt();

@@ -5,6 +5,8 @@ import java.util.Scanner;
 public class RecursividadArreglo {
 	static Scanner scanner = new Scanner(System.in);
 	public static void main(String[] args) {
+		/*Busca un elemento en un arreglo*/
+		
 		int [] arreglo = {0};
 		System.out.println("Ingrese el numero que desea buscar: ");
 		int num = scanner.nextInt();

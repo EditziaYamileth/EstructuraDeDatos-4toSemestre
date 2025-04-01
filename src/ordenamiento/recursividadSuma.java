@@ -6,6 +6,7 @@ public class recursividadSuma {
 static Scanner scanner = new Scanner(System.in);
 
 	public static void main(String[] args) {
+		//Suma la serie de numeros anteriores al numero ingresado
 		int num;
 		System.out.println("Ingrese un numero");
 		num = scanner.nextInt();
@@ -17,8 +18,12 @@ static Scanner scanner = new Scanner(System.in);
 			return 0;
 		}
 		
-		return num + metodoRecursivo(num-1);
+		return num-1+ metodoRecursivo(num-1);
 		
 	}
-
+	
+	/*public static int metodoRecursivo2(int num) {
+		
+	}
+*/
 }
