@@ -19,7 +19,7 @@ static Scanner scanner = new Scanner(System.in);
 		
 		System.out.println(metodoRecursivo(matriz,0,0));
 
-	}
+	} 
 		//3
 	public static float metodoRecursivo(int [] matriz, int cont, float prom) {
 		

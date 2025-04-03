@@ -12,7 +12,7 @@ static Scanner scanner = new Scanner(System.in);
 		mínima de segundos para llegar a su hogar saltando? Leerás B y M e imprimirás los segundos
 		mínimos.*/
 		
-		int segundosMin = 0;
+		float segundosMin = 0;
     	
     	System.out.println("Ingresar cuantos metros por segundos puede saltar la rana:");
         int saltoMetros = scanner.nextInt();
@@ -20,21 +20,26 @@ static Scanner scanner = new Scanner(System.in);
         System.out.println("Ingresar cuántos metros debe recorrer la rana hasta su hogar:");
         int hogarMetros = scanner.nextInt();
         
-        int resultado = RanaRecursivaMetodo(saltoMetros, hogarMetros, segundosMin);
+        float resultado = RanaRecursivaMetodo(saltoMetros, hogarMetros, segundosMin);
         System.out.println("La rana ocupa " + resultado + " segundos");
 		
-
 	}
 	
 	
-	public static int RanaRecursivaMetodo(int saltoMetros, int hogarMetros, int segundosMin) {
-	    	
-	        if (hogarMetros <= 0) {
+	public static float RanaRecursivaMetodo(int saltoMetros, int hogarMetros, float segundosMin) {
+			//Division perfecta
+	        if (hogarMetros == 0) {
 	            return segundosMin;
-	        } else {
+	        }
+	        //corroborar que de exacto
+	        if(hogarMetros < saltoMetros) {
+	        
+	        	return segundosMin + (float) hogarMetros/saltoMetros;
+	 
+	        }
 	        	segundosMin++;
 	            return RanaRecursivaMetodo(saltoMetros, hogarMetros-saltoMetros, segundosMin);
 	        }
     }
 
-}
+
