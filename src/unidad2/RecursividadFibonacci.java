@@ -11,9 +11,10 @@ static Scanner scanner = new Scanner(System.in);
 		System.out.println("Ingrese un numero");
 		num = scanner.nextInt();
 		//System.out.println(metodoRecursivo(num));
-		for(int i=0; i<num; i++) {
+		for(int i=0; i<=num; i++) {
 			System.out.println(metodoRecursivo(i));
 		}
+		//System.out.println(metodoRecursivo(num));
 		
 
 	}

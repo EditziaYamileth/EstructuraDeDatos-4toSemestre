@@ -20,6 +20,9 @@ static Scanner scanner = new Scanner(System.in);
 		}
 		
 		public static int metodoModulo1(int num1,int num2, int contador){
+			if(num1==0) {
+				return 0;
+			}
 			if (num2 < num1 ) {
 				return contador;	
 			}

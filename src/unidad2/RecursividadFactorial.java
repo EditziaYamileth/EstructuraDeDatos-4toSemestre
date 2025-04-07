@@ -10,6 +10,8 @@ static Scanner scanner = new Scanner(System.in);
 		System.out.println("Ingrese un numero: ");
 		num = scanner.nextInt();
 		
+		
+		System.out.print(num+"! = ");
 		System.out.println(metodoRecursivo(num));
 		
 		
@@ -18,8 +20,17 @@ static Scanner scanner = new Scanner(System.in);
 	
 	public static int metodoRecursivo(int num){
 		if(num==0) {
+			System.out.println();
 			return 1;
 		}
+		if(num == 1) {
+			System.out.print(num);
+		
+		}
+		else {
+			System.out.print(num + " * ");
+		}
+		
 		return num * metodoRecursivo(num - 1);
 
 		
