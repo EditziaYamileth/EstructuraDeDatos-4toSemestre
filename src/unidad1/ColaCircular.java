@@ -1,17 +1,19 @@
-package ordenamiento;
+package unidad1;
 
-public class ColaSimple<T> {
-    private T colaSimple[];
-    private int cabeza = -1;
-    private int cola = -1;
+public class ColaCircular<T> {
+    private T[] colaCircular;
+    private int cabeza;
+    private int cola;
     private int maxSize;
 
-    public ColaSimple(int maxSize) {
+    public ColaCircular(int maxSize) {
         if (maxSize <= 0) {
             throw new IllegalArgumentException("El tamaño máximo debe ser mayor que 0.");
         }
         this.maxSize = maxSize;
-        colaSimple = (T[]) new Object[maxSize];
+        colaCircular = (T[]) new Object[maxSize];
+        cabeza = -1;
+        cola = -1;
     }
 
     public boolean pop() {
@@ -19,14 +21,15 @@ public class ColaSimple<T> {
             System.out.println("Cola vacía, no se pueden retirar datos.");
             return false;
         }
-        
-        
-        T dato = colaSimple[cabeza];
-        colaSimple[cabeza] = null; // Limpia la referencia
+
+        colaCircular[cabeza] = null; // Elimina el elemento
+
         if (cabeza == cola) { // Si se eliminó el último elemento
             cabeza = cola = -1;
+        } else {
+            cabeza = (cabeza + 1) % maxSize; // Avanza circularmente
         }
-        else cabeza++;
+
         return true;
     }
 
@@ -38,27 +41,26 @@ public class ColaSimple<T> {
 
         if (isEmpty()) {
             cabeza = cola = 0;
-        } 
-        else {
-            cola++;
+        } else {
+            cola = (cola + 1) % maxSize; // Avanza circularmente
         }
 
-        colaSimple[cola] = dato;
+        colaCircular[cola] = dato;
         return true;
     }
 
     public T peek() {
         if (isEmpty()) {
-        	return null;
+            throw new IllegalStateException("Cola vacía, no hay datos para ver.");
         }
-        return colaSimple[cabeza];
+        return colaCircular[cabeza];
     }
 
     public boolean isEmpty() {
-        return cola == -1;
+        return cabeza == -1;
     }
 
-    private boolean isFull() {
-        return cola == maxSize-1;
+    public boolean isFull() {
+        return (cola + 1) % maxSize == cabeza;
     }
 }
