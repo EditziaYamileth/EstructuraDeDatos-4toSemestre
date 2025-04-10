@@ -23,7 +23,22 @@ public class RecursividadArreglo {
 
 	}
 	
-	public static boolean metodoArreglo(int [] arreglo, int num, int y) {
+	
+	public static boolean metodoArreglo(int [] arreglo, int num, int length) {
+		if(length < 0) {
+			return false; 
+			
+		}
+		
+		else if(arreglo[length] == num) {
+			return true;
+		}
+		
+		return metodoArreglo(arreglo, num, length-1);
+	}
+	
+	
+	/*public static boolean metodoArreglo(int [] arreglo, int num, int y) {
 		
 		if(y < 0 ){
 			return false;
@@ -33,5 +48,7 @@ public class RecursividadArreglo {
 		}
 			return metodoArreglo(arreglo,num,y-1);
 	}
+	*/
+	
 
 }

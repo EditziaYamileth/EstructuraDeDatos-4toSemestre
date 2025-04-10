@@ -49,12 +49,12 @@ public class ColaSimple<T> {
 
     public T peek() {
         if (isEmpty()) {
-            throw new IllegalStateException("Cola vacía, no hay datos para ver.");
+        	return null;
         }
         return colaSimple[cabeza];
     }
 
-    private boolean isEmpty() {
+    public boolean isEmpty() {
         return cola == -1;
     }
 

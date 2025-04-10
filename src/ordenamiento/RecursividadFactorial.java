@@ -18,7 +18,35 @@ static Scanner scanner = new Scanner(System.in);
 
 	}
 	
-	public static int metodoRecursivo(int num){
+	public static int metodoRecursivo(int num) {
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	/*public static int metodoRecursivo(int num){
 		if(num==0) {
 			System.out.println();
 			return 1;
@@ -34,6 +62,6 @@ static Scanner scanner = new Scanner(System.in);
 		return num * metodoRecursivo(num - 1);
 
 		
-	}
+	}*/
 
 }
