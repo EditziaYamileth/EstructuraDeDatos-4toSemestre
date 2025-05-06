@@ -12,15 +12,15 @@ static Scanner scanner = new Scanner(System.in);
 		
 		
 		System.out.print(num+"! = ");
-		System.out.println(metodoRecursivo(num));
+		//System.out.println(metodoRecursivo(num));
 		
 		
 
 	}
 	
-	public static int metodoRecursivo(int num) {
+	/*public static int metodoRecursivo(int num) {
 		
-	}
+	}*/
 	
 	
 	
