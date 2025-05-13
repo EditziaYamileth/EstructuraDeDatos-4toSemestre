@@ -20,26 +20,27 @@ static Scanner scanner = new Scanner(System.in);
 		Pila <Moneda> pilaAux = new Pila<>();
 		Cola <Moneda> colaAux =  new Cola<>();
 		
-		Moneda monedaMayor;
+		Moneda monedaMenor;
 
 		
 		while(!pila.estaVacia()) {
-			monedaMayor = new Moneda(null, 0, "");
+			monedaMenor = new Moneda(null, 0, "");
+			monedaMenor = pila.Tope();
 			while(!pila.estaVacia()) {
-				 if(monedaMayor.compareTo(pila.Tope()) ==  -1) {
-					 monedaMayor = pila.Tope();	 
+				 if(monedaMenor.compareTo(pila.Tope()) ==  1) {
+					 monedaMenor = pila.Tope();	 
 				 } 
 					 pilaAux.Meter(pila.Sacar());		 
 			}
 			
 			while(!pilaAux.estaVacia()) {
-				if(monedaMayor.compareTo(pilaAux.Tope()) == 1 || pilaAux.Tope().getId() != monedaMayor.getId()) {
+				if(pilaAux.Tope().getId() != monedaMenor.getId()) {
 					pila.Meter(pilaAux.Tope());
 				} 
 				pilaAux.Sacar();
 			}
 		
-		colaAux.Meter(monedaMayor);
+		colaAux.Meter(monedaMenor);
 			
 		}	
 		System.out.println("COLA ORDENADA: ");

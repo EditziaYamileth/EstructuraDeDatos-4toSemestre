@@ -1,7 +1,7 @@
 package unidad1;
 
 public class ListaOrdenada {
-	private Nodo cabeza;
+	private NodoP cabeza;
 	private int tamanio;
 	
 	public ListaOrdenada() {
@@ -10,7 +10,7 @@ public class ListaOrdenada {
 	}
 	
 	public void insertarOrdenada(int val){
-		Nodo nodo = new Nodo(val);
+		NodoP nodo = new NodoP(val);
 		if(isEmpty()) { 
 			cabeza = nodo;
 			tamanio++;
@@ -22,7 +22,7 @@ public class ListaOrdenada {
 			tamanio++;
 			return;
 		}
-		Nodo aux = cabeza;
+		NodoP aux = cabeza;
 		while(aux.siguiente != null && aux.siguiente.val< val){
 			aux = aux.siguiente;
 		}
@@ -32,7 +32,7 @@ public class ListaOrdenada {
 	}
 	
 	public void mostrar() {
-		Nodo nodo = cabeza;
+		NodoP nodo = cabeza;
 		for(int i=0; i< tamanio; i++) {
 			System.out.print(nodo.val + " ");
 			nodo = nodo.siguiente;

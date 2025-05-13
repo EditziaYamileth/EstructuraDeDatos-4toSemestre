@@ -5,7 +5,7 @@ public class Cola <Dato>{
 	private Nodo <Dato> fin;
 	
 	public Cola() {inicio = null;}
-	public Cola(Cola<Dato> cola) {inicio = cola.getInicio();}
+	//public Cola(Cola<Dato> cola) {inicio = cola.getInicio();}
 	
 	public void Meter(Dato dato) {
 		Nodo<Dato> nuevo = new Nodo<Dato>(dato);
@@ -36,12 +36,12 @@ public class Cola <Dato>{
 		return inicio == null;
 	}
 	
-	public Nodo<Dato> getInicio(){return inicio;}
+	public Dato getInicio(){return inicio.getDato();}
 	public Nodo<Dato> getFin(){return fin;}
 	
 	public String toString() {
-		String salida = "Contenido de la cola:\n";
-		if(inicio == null) return salida + "La cola esta vacia";
+		String salida = "";
+		if(inicio == null) return salida + "No hay clientes esperando \n";
 		Nodo <Dato> act = inicio;
 		for(int i = 0; act!=null;i++) {
 			salida+="["+i+"]: ";

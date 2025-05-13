@@ -1,6 +1,6 @@
 package asesorias;
 
-public class Galleta {
+public class Galleta { 
 	String marca;
 	int id;
 	int peso;
